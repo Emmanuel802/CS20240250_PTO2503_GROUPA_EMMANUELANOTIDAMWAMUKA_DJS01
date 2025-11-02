@@ -1,7 +1,12 @@
 import { createPodcastCard } from "./podcastCard.js";
 import { createModal } from "./modal.js";
 
-// Creates and manages the grid of podcast cards
+/**
+ * Creates and manages the podcast grid component
+ * @module grid
+ * @returns {Object} Grid controller with render method
+ * @property {Function} render - Renders podcast cards into the grid
+ */
 export const createGrid = () => {
   const container = document.getElementById("podcast-grid");
 
@@ -12,6 +17,10 @@ export const createGrid = () => {
   }
 
   return {
+    /**
+     * Renders the podcast grid with provided podcast data
+     * @param {Array<Object>} podcasts - Array of podcast objects to display
+     */
     render(podcasts) {
       // Clear existing cards
       container.innerHTML = "";

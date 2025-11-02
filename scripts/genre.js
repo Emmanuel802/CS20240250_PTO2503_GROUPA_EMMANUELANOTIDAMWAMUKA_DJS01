@@ -1,7 +1,15 @@
 import { genres } from "./data.js";
 
-// Helps convert genre IDs to their display names
+/**
+ * Utility for handling podcast genre operations
+ * @namespace
+ */
 export const Genre = {
+  /**
+   * Converts genre IDs to their display names
+   * @param {Array<number>} ids - Array of genre IDs
+   * @returns {Array<string>} Array of genre names
+   */
   getNames(ids) {
     const result = [];
     for (const id of ids) {

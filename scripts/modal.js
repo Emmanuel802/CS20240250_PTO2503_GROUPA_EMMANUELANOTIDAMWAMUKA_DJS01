@@ -2,7 +2,12 @@ import { Genre } from "./genre.js";
 import { DateFormat } from "./dateFormat.js";
 import { seasons } from "./data.js";
 
-// Creates and manages the podcast details modal
+/**
+ * Modal component for displaying detailed podcast information
+ * @module modal
+ * @property {Function} open - Opens the modal with podcast details
+ * @property {Function} close - Closes the modal
+ */
 export const createModal = (() => {
   // Get all the elements we need
   const modal = document.getElementById("modal");
@@ -15,7 +20,11 @@ export const createModal = (() => {
     seasons: document.getElementById("seasons-list"),
   };
 
-  // Update modal content with podcast info
+  /**
+   * Updates the modal content with podcast information
+   * @param {Object} podcast - The podcast data to display
+   * @private
+   */
   function updateContent(podcast) {
     if (!podcast) return;
 

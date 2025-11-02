@@ -1,7 +1,18 @@
 import { Genre } from "./genre.js";
 import { DateFormat } from "./dateFormat.js";
 
-// Creates a card element for a single podcast
+/**
+ * Creates a podcast card element with all podcast information
+ * @param {Object} podcast - The podcast data object
+ * @param {string} podcast.id - Unique identifier for the podcast
+ * @param {string} podcast.title - Title of the podcast
+ * @param {string} podcast.image - URL of the podcast cover image
+ * @param {number} podcast.seasons - Number of seasons
+ * @param {Array<number>} podcast.genres - Array of genre IDs
+ * @param {string} podcast.updated - Last update date string
+ * @param {Function} onClick - Callback function when card is clicked
+ * @returns {HTMLElement} The created card element
+ */
 export const createPodcastCard = (podcast, onClick) => {
   // Create main card container
   const card = document.createElement("div");
